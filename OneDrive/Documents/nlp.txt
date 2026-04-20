@@ -1,0 +1,136 @@
+1 a)
+
+!pip install python-docx
+import re
+from docx import Document
+def extract_emails_from_word(file_path):
+doc = Document(file_path)
+text = ""
+for para in doc.paragraphs:
+text += para.text + " "
+pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+emails = re.findall(pattern, text)
+return emails
+# Dataset file
+file_path = "emails.docx"
+emails = extract_emails_from_word(file_path)
+print("Extracted Email IDs:")
+for email in emails:
+print(email)
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+1 b)
+
+text_data = "This is a Sample TEXT, with punctuation! and some common stop words."
+import string
+import nltk
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+def preprocess_text(text):
+text = text.lower()
+text = text.translate(str.maketrans('', '', string.punctuation))
+stop_words = set(stopwords.words('english'))
+words = text.split()
+filtered = [word for word in words if word not in stop_words]
+return " ".join(filtered)
+processed_text = preprocess_text(text_data)
+print("Original Text:")
+print(text_data)
+print("\nProcessed Text:")
+print(processed_text)
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+2)
+
+!pip install textblob
+from textblob import TextBlob
+spell_text = "Ths is an exmple of txt with speling mistaks"
+def spell_correction(text):
+text = text.lower()
+blob = TextBlob(text)
+return blob.correct()
+corrected_text = spell_correction(spell_text)
+print("Original Text:")
+print(spell_text)
+print("\nCorrected Text:")
+print(corrected_text)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3)
+import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+from nltk.tokenize import word_tokenize
+from nltk.stem import PorterStemmer, WordNetLemmatizer
+sentence = "The students are learning Natural Language Processing"
+tokens = word_tokenize(sentence)
+stemmer = PorterStemmer()
+stems = [stemmer.stem(word) for word in tokens]
+lemmatizer = WordNetLemmatizer()
+lemmas = [lemmatizer.lemmatize(word) for word in tokens]
+print("Tokens:", tokens)
+print("Stemming:", stems)
+print("Lemmatization:", lemmas)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4 a)
+
+documents = [
+"I love machine learning",
+"Machine learning is fun",
+"I love NLP"
+]
+one_hot = CountVectorizer(binary=True)
+one_hot_matrix = one_hot.fit_transform(documents)
+df_one_hot = pd.DataFrame(
+one_hot_matrix.toarray(),
+columns=one_hot.get_feature_names_out()
+)
+df_one_hot
+
+4 b)
+
+count_vec = CountVectorizer()
+count_matrix = count_vec.fit_transform(documents)
+
+df_count = pd.DataFrame(
+count_matrix.toarray(),
+columns=count_vec.get_feature_names_out()
+)
+df_count
+
+4 c)
+
+tfidf = TfidfVectorizer()
+tfidf_matrix = tfidf.fit_transform(documents)
+df_tfidf = pd.DataFrame(
+tfidf_matrix.toarray(),
+columns=tfidf.get_feature_names_out()
+)
+df_tfidf
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+5)
+
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.util import ngrams
+nltk.download('punkt')
+text = "Natural language processing is very interesting"
+tokens = word_tokenize(text)
+bigrams = list(ngrams(tokens, 2))
+trigrams = list(ngrams(tokens, 3))
+print("Bigrams:")
+print(bigrams)
+print("\nTrigrams:")
+print(trigrams)
+
+
