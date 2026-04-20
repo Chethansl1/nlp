@@ -1,0 +1,458 @@
+{
+  "General": [
+    {
+      "name": "fever",
+      "display_name": "Fever",
+      "description": "Body temperature above normal"
+    },
+    {
+      "name": "fatigue",
+      "display_name": "Fatigue",
+      "description": "Extreme tiredness or exhaustion"
+    },
+    {
+      "name": "weight_loss",
+      "display_name": "Weight Loss",
+      "description": "Unintentional loss of body weight"
+    },
+    {
+      "name": "weight_gain",
+      "display_name": "Weight Gain",
+      "description": "Unintentional increase in body weight"
+    },
+    {
+      "name": "chills",
+      "display_name": "Chills",
+      "description": "Feeling cold with shivering"
+    },
+    {
+      "name": "night_sweats",
+      "display_name": "Night Sweats",
+      "description": "Excessive sweating during sleep"
+    },
+    {
+      "name": "loss_of_appetite",
+      "display_name": "Loss of Appetite",
+      "description": "Reduced desire to eat"
+    },
+    {
+      "name": "malaise",
+      "display_name": "Malaise",
+      "description": "General feeling of discomfort or illness"
+    },
+    {
+      "name": "weakness",
+      "display_name": "Weakness",
+      "description": "Lack of physical strength"
+    },
+    {
+      "name": "dehydration",
+      "display_name": "Dehydration",
+      "description": "Excessive loss of body water"
+    },
+    {
+      "name": "swollen_lymph_nodes",
+      "display_name": "Swollen Lymph Nodes",
+      "description": "Enlarged lymph glands"
+    },
+    {
+      "name": "pale_skin",
+      "display_name": "Pale Skin",
+      "description": "Unusually light skin color"
+    }
+  ],
+  "Respiratory": [
+    {
+      "name": "cough",
+      "display_name": "Cough",
+      "description": "Sudden expulsion of air from lungs"
+    },
+    {
+      "name": "shortness_of_breath",
+      "display_name": "Shortness of Breath",
+      "description": "Difficulty breathing"
+    },
+    {
+      "name": "chest_pain",
+      "display_name": "Chest Pain",
+      "description": "Pain in the chest area"
+    },
+    {
+      "name": "wheezing",
+      "display_name": "Wheezing",
+      "description": "High-pitched breathing sound"
+    },
+    {
+      "name": "sore_throat",
+      "display_name": "Sore Throat",
+      "description": "Pain or irritation in throat"
+    },
+    {
+      "name": "runny_nose",
+      "display_name": "Runny Nose",
+      "description": "Nasal discharge"
+    },
+    {
+      "name": "nasal_congestion",
+      "display_name": "Nasal Congestion",
+      "description": "Blocked nasal passages"
+    },
+    {
+      "name": "sneezing",
+      "display_name": "Sneezing",
+      "description": "Sudden expulsion of air through nose"
+    },
+    {
+      "name": "hoarse_voice",
+      "display_name": "Hoarse Voice",
+      "description": "Rough or harsh voice"
+    },
+    {
+      "name": "coughing_blood",
+      "display_name": "Coughing Blood",
+      "description": "Blood in cough or sputum"
+    },
+    {
+      "name": "rapid_breathing",
+      "display_name": "Rapid Breathing",
+      "description": "Faster than normal breathing rate"
+    },
+    {
+      "name": "shallow_breathing",
+      "display_name": "Shallow Breathing",
+      "description": "Reduced depth of breathing"
+    }
+  ],
+  "Gastrointestinal": [
+    {
+      "name": "nausea",
+      "display_name": "Nausea",
+      "description": "Feeling of sickness with urge to vomit"
+    },
+    {
+      "name": "vomiting",
+      "display_name": "Vomiting",
+      "description": "Forceful expulsion of stomach contents"
+    },
+    {
+      "name": "diarrhea",
+      "display_name": "Diarrhea",
+      "description": "Loose or watery bowel movements"
+    },
+    {
+      "name": "constipation",
+      "display_name": "Constipation",
+      "description": "Difficulty passing stool"
+    },
+    {
+      "name": "abdominal_pain",
+      "display_name": "Abdominal Pain",
+      "description": "Pain in the stomach area"
+    },
+    {
+      "name": "bloating",
+      "display_name": "Bloating",
+      "description": "Feeling of fullness in abdomen"
+    },
+    {
+      "name": "heartburn",
+      "display_name": "Heartburn",
+      "description": "Burning sensation in chest"
+    },
+    {
+      "name": "loss_of_taste",
+      "display_name": "Loss of Taste",
+      "description": "Inability to taste food"
+    },
+    {
+      "name": "loss_of_smell",
+      "display_name": "Loss of Smell",
+      "description": "Inability to smell odors"
+    },
+    {
+      "name": "bloody_stool",
+      "display_name": "Bloody Stool",
+      "description": "Blood in bowel movements"
+    },
+    {
+      "name": "black_stool",
+      "display_name": "Black Stool",
+      "description": "Dark, tarry bowel movements"
+    },
+    {
+      "name": "excessive_gas",
+      "display_name": "Excessive Gas",
+      "description": "Increased intestinal gas"
+    }
+  ],
+  "Neurological": [
+    {
+      "name": "headache",
+      "display_name": "Headache",
+      "description": "Pain in the head or neck"
+    },
+    {
+      "name": "dizziness",
+      "display_name": "Dizziness",
+      "description": "Feeling of unsteadiness"
+    },
+    {
+      "name": "confusion",
+      "display_name": "Confusion",
+      "description": "Difficulty thinking clearly"
+    },
+    {
+      "name": "memory_loss",
+      "display_name": "Memory Loss",
+      "description": "Inability to remember information"
+    },
+    {
+      "name": "seizures",
+      "display_name": "Seizures",
+      "description": "Sudden electrical activity in brain"
+    },
+    {
+      "name": "numbness",
+      "display_name": "Numbness",
+      "description": "Loss of sensation"
+    },
+    {
+      "name": "tingling",
+      "display_name": "Tingling",
+      "description": "Pins and needles sensation"
+    },
+    {
+      "name": "vision_problems",
+      "display_name": "Vision Problems",
+      "description": "Difficulty seeing clearly"
+    },
+    {
+      "name": "hearing_loss",
+      "display_name": "Hearing Loss",
+      "description": "Reduced ability to hear"
+    },
+    {
+      "name": "balance_problems",
+      "display_name": "Balance Problems",
+      "description": "Difficulty maintaining balance"
+    },
+    {
+      "name": "tremors",
+      "display_name": "Tremors",
+      "description": "Involuntary shaking"
+    },
+    {
+      "name": "speech_problems",
+      "display_name": "Speech Problems",
+      "description": "Difficulty speaking clearly"
+    }
+  ],
+  "Cardiovascular": [
+    {
+      "name": "palpitations",
+      "display_name": "Palpitations",
+      "description": "Awareness of heartbeat"
+    },
+    {
+      "name": "irregular_heartbeat",
+      "display_name": "Irregular Heartbeat",
+      "description": "Abnormal heart rhythm"
+    },
+    {
+      "name": "high_blood_pressure",
+      "display_name": "High Blood Pressure",
+      "description": "Elevated blood pressure"
+    },
+    {
+      "name": "low_blood_pressure",
+      "display_name": "Low Blood Pressure",
+      "description": "Reduced blood pressure"
+    },
+    {
+      "name": "swelling_legs",
+      "display_name": "Swelling in Legs",
+      "description": "Fluid retention in lower extremities"
+    },
+    {
+      "name": "swelling_ankles",
+      "display_name": "Swelling in Ankles",
+      "description": "Fluid retention in ankles"
+    },
+    {
+      "name": "cold_hands_feet",
+      "display_name": "Cold Hands/Feet",
+      "description": "Poor circulation to extremities"
+    },
+    {
+      "name": "blue_lips",
+      "display_name": "Blue Lips",
+      "description": "Cyanosis of lips"
+    },
+    {
+      "name": "fainting",
+      "display_name": "Fainting",
+      "description": "Brief loss of consciousness"
+    },
+    {
+      "name": "lightheadedness",
+      "display_name": "Lightheadedness",
+      "description": "Feeling faint or dizzy"
+    }
+  ],
+  "Musculoskeletal": [
+    {
+      "name": "joint_pain",
+      "display_name": "Joint Pain",
+      "description": "Pain in joints"
+    },
+    {
+      "name": "muscle_pain",
+      "display_name": "Muscle Pain",
+      "description": "Pain in muscles"
+    },
+    {
+      "name": "back_pain",
+      "display_name": "Back Pain",
+      "description": "Pain in the back"
+    },
+    {
+      "name": "neck_pain",
+      "display_name": "Neck Pain",
+      "description": "Pain in the neck"
+    },
+    {
+      "name": "stiffness",
+      "display_name": "Stiffness",
+      "description": "Reduced flexibility"
+    },
+    {
+      "name": "swelling_joints",
+      "display_name": "Swelling in Joints",
+      "description": "Joint inflammation"
+    },
+    {
+      "name": "muscle_weakness",
+      "display_name": "Muscle Weakness",
+      "description": "Reduced muscle strength"
+    },
+    {
+      "name": "muscle_cramps",
+      "display_name": "Muscle Cramps",
+      "description": "Involuntary muscle contractions"
+    },
+    {
+      "name": "bone_pain",
+      "display_name": "Bone Pain",
+      "description": "Deep aching in bones"
+    },
+    {
+      "name": "limited_mobility",
+      "display_name": "Limited Mobility",
+      "description": "Reduced range of motion"
+    }
+  ],
+  "Dermatological": [
+    {
+      "name": "rash",
+      "display_name": "Rash",
+      "description": "Skin irritation or eruption"
+    },
+    {
+      "name": "itching",
+      "display_name": "Itching",
+      "description": "Desire to scratch skin"
+    },
+    {
+      "name": "dry_skin",
+      "display_name": "Dry Skin",
+      "description": "Lack of moisture in skin"
+    },
+    {
+      "name": "skin_discoloration",
+      "display_name": "Skin Discoloration",
+      "description": "Changes in skin color"
+    },
+    {
+      "name": "bruising",
+      "display_name": "Bruising",
+      "description": "Discoloration from bleeding under skin"
+    },
+    {
+      "name": "hair_loss",
+      "display_name": "Hair Loss",
+      "description": "Loss of hair from scalp or body"
+    },
+    {
+      "name": "nail_changes",
+      "display_name": "Nail Changes",
+      "description": "Changes in nail appearance"
+    },
+    {
+      "name": "skin_lesions",
+      "display_name": "Skin Lesions",
+      "description": "Abnormal skin growths or marks"
+    },
+    {
+      "name": "excessive_sweating",
+      "display_name": "Excessive Sweating",
+      "description": "Abnormally increased sweating"
+    },
+    {
+      "name": "skin_sensitivity",
+      "display_name": "Skin Sensitivity",
+      "description": "Increased skin reactivity"
+    }
+  ],
+  "Genitourinary": [
+    {
+      "name": "frequent_urination",
+      "display_name": "Frequent Urination",
+      "description": "Increased frequency of urination"
+    },
+    {
+      "name": "painful_urination",
+      "display_name": "Painful Urination",
+      "description": "Pain during urination"
+    },
+    {
+      "name": "blood_in_urine",
+      "display_name": "Blood in Urine",
+      "description": "Hematuria"
+    },
+    {
+      "name": "difficulty_urinating",
+      "display_name": "Difficulty Urinating",
+      "description": "Problems with urination"
+    },
+    {
+      "name": "incontinence",
+      "display_name": "Incontinence",
+      "description": "Loss of bladder control"
+    },
+    {
+      "name": "pelvic_pain",
+      "display_name": "Pelvic Pain",
+      "description": "Pain in pelvic region"
+    },
+    {
+      "name": "genital_discharge",
+      "display_name": "Genital Discharge",
+      "description": "Abnormal genital secretions"
+    },
+    {
+      "name": "genital_itching",
+      "display_name": "Genital Itching",
+      "description": "Itching in genital area"
+    },
+    {
+      "name": "erectile_dysfunction",
+      "display_name": "Erectile Dysfunction",
+      "description": "Difficulty achieving erection"
+    },
+    {
+      "name": "menstrual_irregularities",
+      "display_name": "Menstrual Irregularities",
+      "description": "Abnormal menstrual cycles"
+    }
+  ]
+}

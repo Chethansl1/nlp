@@ -1,0 +1,73 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║            🚗 AUTONOMOUS VEHICLE LANE DETECTION - WINDOWS START           ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+👉 DO THIS FIRST (One Time):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Double-click: setup_and_run.bat
+
+   This will:
+   ✓ Check Node.js and Python
+   ✓ Download npm packages (may take 2-3 minutes)
+   ✓ Set up Python environment
+   ✓ Start React frontend (port 3000)
+   ✓ Start Flask backend (port 5000)
+
+   WAIT for it to finish! Don't close the windows.
+
+
+👉 AFTER FIRST TIME, USE THIS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. Double-click: quick_start.bat
+
+   This starts both services quickly (no setup needed).
+
+
+🔧 IF SOMETHING GOES WRONG:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. Double-click: diagnose.bat
+
+   This shows what's wrong and how to fix it.
+
+
+✓ YOU NEED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• Node.js (https://nodejs.org/) - Download LTS version
+• Python (https://python.org/) - Check "Add Python to PATH" when installing
+• Internet (for first time setup)
+• ~1GB disk space
+
+
+✓ WHAT YOU'LL SEE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+After starting, you'll see two command windows:
+
+1. React Window (shows: "compiled successfully")
+2. Flask Window (shows: "Running on http://localhost:5000")
+
+Then browser opens to: http://localhost:3000
+
+
+🎯 QUICK TEST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Page should load with upload button
+2. Click: 📷 Upload Image
+3. Choose any image (road, car, etc.)
+4. Click: Process Image
+5. See results!
+
+
+📖 MORE HELP:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+• WINDOWS_SETUP.md - Complete setup guide
+• RUNNING.md - How to use the app
+• TROUBLESHOOTING.md - Common issues
+
+
+═══════════════════════════════════════════════════════════════════════════════
+
+👉 START: Double-click setup_and_run.bat
+
+═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,254 @@
+[
+  {
+    "name": "Common Cold",
+    "category": "Infectious",
+    "severity": "Mild",
+    "prevalence": 0.15
+  },
+  {
+    "name": "Influenza",
+    "category": "Infectious",
+    "severity": "Moderate",
+    "prevalence": 0.08
+  },
+  {
+    "name": "Pneumonia",
+    "category": "Infectious",
+    "severity": "Severe",
+    "prevalence": 0.03
+  },
+  {
+    "name": "Bronchitis",
+    "category": "Infectious",
+    "severity": "Moderate",
+    "prevalence": 0.05
+  },
+  {
+    "name": "Sinusitis",
+    "category": "Infectious",
+    "severity": "Mild",
+    "prevalence": 0.06
+  },
+  {
+    "name": "Strep Throat",
+    "category": "Infectious",
+    "severity": "Moderate",
+    "prevalence": 0.04
+  },
+  {
+    "name": "Urinary Tract Infection",
+    "category": "Infectious",
+    "severity": "Moderate",
+    "prevalence": 0.07
+  },
+  {
+    "name": "Gastroenteritis",
+    "category": "Infectious",
+    "severity": "Moderate",
+    "prevalence": 0.05
+  },
+  {
+    "name": "Diabetes Type 2",
+    "category": "Chronic",
+    "severity": "Moderate",
+    "prevalence": 0.09
+  },
+  {
+    "name": "Hypertension",
+    "category": "Chronic",
+    "severity": "Moderate",
+    "prevalence": 0.12
+  },
+  {
+    "name": "Asthma",
+    "category": "Chronic",
+    "severity": "Moderate",
+    "prevalence": 0.08
+  },
+  {
+    "name": "Arthritis",
+    "category": "Chronic",
+    "severity": "Moderate",
+    "prevalence": 0.06
+  },
+  {
+    "name": "COPD",
+    "category": "Chronic",
+    "severity": "Severe",
+    "prevalence": 0.04
+  },
+  {
+    "name": "Heart Disease",
+    "category": "Chronic",
+    "severity": "Severe",
+    "prevalence": 0.05
+  },
+  {
+    "name": "Chronic Kidney Disease",
+    "category": "Chronic",
+    "severity": "Severe",
+    "prevalence": 0.03
+  },
+  {
+    "name": "Appendicitis",
+    "category": "Acute",
+    "severity": "Severe",
+    "prevalence": 0.01
+  },
+  {
+    "name": "Heart Attack",
+    "category": "Acute",
+    "severity": "Severe",
+    "prevalence": 0.01
+  },
+  {
+    "name": "Stroke",
+    "category": "Acute",
+    "severity": "Severe",
+    "prevalence": 0.01
+  },
+  {
+    "name": "Kidney Stones",
+    "category": "Acute",
+    "severity": "Severe",
+    "prevalence": 0.02
+  },
+  {
+    "name": "Gallstones",
+    "category": "Acute",
+    "severity": "Moderate",
+    "prevalence": 0.02
+  },
+  {
+    "name": "Depression",
+    "category": "Mental Health",
+    "severity": "Moderate",
+    "prevalence": 0.08
+  },
+  {
+    "name": "Anxiety Disorder",
+    "category": "Mental Health",
+    "severity": "Moderate",
+    "prevalence": 0.07
+  },
+  {
+    "name": "Panic Disorder",
+    "category": "Mental Health",
+    "severity": "Moderate",
+    "prevalence": 0.03
+  },
+  {
+    "name": "GERD",
+    "category": "Gastrointestinal",
+    "severity": "Mild",
+    "prevalence": 0.06
+  },
+  {
+    "name": "IBS",
+    "category": "Gastrointestinal",
+    "severity": "Mild",
+    "prevalence": 0.05
+  },
+  {
+    "name": "Peptic Ulcer",
+    "category": "Gastrointestinal",
+    "severity": "Moderate",
+    "prevalence": 0.03
+  },
+  {
+    "name": "Crohn's Disease",
+    "category": "Gastrointestinal",
+    "severity": "Severe",
+    "prevalence": 0.01
+  },
+  {
+    "name": "Migraine",
+    "category": "Neurological",
+    "severity": "Moderate",
+    "prevalence": 0.07
+  },
+  {
+    "name": "Tension Headache",
+    "category": "Neurological",
+    "severity": "Mild",
+    "prevalence": 0.1
+  },
+  {
+    "name": "Epilepsy",
+    "category": "Neurological",
+    "severity": "Severe",
+    "prevalence": 0.01
+  },
+  {
+    "name": "Multiple Sclerosis",
+    "category": "Neurological",
+    "severity": "Severe",
+    "prevalence": 0.001
+  },
+  {
+    "name": "Eczema",
+    "category": "Dermatological",
+    "severity": "Mild",
+    "prevalence": 0.04
+  },
+  {
+    "name": "Psoriasis",
+    "category": "Dermatological",
+    "severity": "Moderate",
+    "prevalence": 0.02
+  },
+  {
+    "name": "Acne",
+    "category": "Dermatological",
+    "severity": "Mild",
+    "prevalence": 0.08
+  },
+  {
+    "name": "Hypothyroidism",
+    "category": "Endocrine",
+    "severity": "Moderate",
+    "prevalence": 0.05
+  },
+  {
+    "name": "Hyperthyroidism",
+    "category": "Endocrine",
+    "severity": "Moderate",
+    "prevalence": 0.01
+  },
+  {
+    "name": "Fibromyalgia",
+    "category": "Musculoskeletal",
+    "severity": "Moderate",
+    "prevalence": 0.02
+  },
+  {
+    "name": "Osteoporosis",
+    "category": "Musculoskeletal",
+    "severity": "Moderate",
+    "prevalence": 0.03
+  },
+  {
+    "name": "Allergic Rhinitis",
+    "category": "Allergic",
+    "severity": "Mild",
+    "prevalence": 0.09
+  },
+  {
+    "name": "Food Allergy",
+    "category": "Allergic",
+    "severity": "Moderate",
+    "prevalence": 0.04
+  },
+  {
+    "name": "Anemia",
+    "category": "Hematological",
+    "severity": "Moderate",
+    "prevalence": 0.05
+  },
+  {
+    "name": "Sleep Apnea",
+    "category": "Sleep Disorder",
+    "severity": "Moderate",
+    "prevalence": 0.04
+  }
+]

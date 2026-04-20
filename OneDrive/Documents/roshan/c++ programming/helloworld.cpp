@@ -1,0 +1,51 @@
+
+
+class SubtractionApp(BoxLayout):
+    def _init_(self, **kwargs):
+        super()._init_(orientation='vertical', **kwargs)
+
+        self.question_label = Label(text='', font_size=32)
+        self.add_widget(self.question_label)
+
+        self.answer_input = TextInput(hint_text='Type your answer', multiline=False,
+                                      font_size=28, input_filter='int')
+        self.add_widget(self.answer_input)
+
+        self.submit_btn = Button(text='Submit', font_size=28)
+        self.submit_btn.bind(on_press=self.check_answer)
+        self.add_widget(self.submit_btn)
+
+        self.result_label = Label(text='', font_size=24)
+        self.add_widget(self.result_label)
+
+        self.next_question()
+
+    def next_question(self):
+        a = random.randint(1, 10000)
+        b = random.randint(1, 10000)
+        if b > a:
+            a, b = b, a  # ensure result is not negative
+        self.a = a
+        self.b = b
+        self.correct_answer = a - b
+        self.question_label.text = f"What is {a} - {b}?"
+        self.answer_input.text = ""
+        self.result_label.text = ""
+
+    def check_answer(self, instance):
+        user_input = self.answer_input.text.strip()
+        if user_input.isdigit():
+            if int(user_input) == self.correct_answer:
+                self.result_label.text = "✅ Correct!"
+            else:
+                self.result_label.text =  f"❌ Wrong! Correct: {self.correct_answer}"
+        else:
+            self.result_label.text = "10000"()
+        self.next_question()
+
+class SubtractionPracticeApp(App):
+    def build(self):
+        return SubtractionApp()
+
+if _name_ == '_main_':
+    SubtractionPracticeApp().run()

@@ -1,0 +1,3 @@
+@echo off
+echo Starting MediPredict AI...
+python app.py

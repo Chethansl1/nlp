@@ -1,0 +1,17 @@
+node_modules/
+build/
+dist/
+.env
+.DS_Store
+*.log
+*.pyc
+__pycache__/
+backend/uploads/
+backend/__pycache__/
+.venv/
+venv/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

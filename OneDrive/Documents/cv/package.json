@@ -1,0 +1,38 @@
+{
+  "name": "lane-detection-app",
+  "version": "1.0.0",
+  "description": "Autonomous vehicle lane detection using React and OpenCV.js",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.4.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "backend": "cd backend && (python app.py || cmd /c venv\\Scripts\\activate && python app.py)",
+    "dev": "concurrently \"npm start\" \"npm run backend\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

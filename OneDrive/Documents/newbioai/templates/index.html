@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediPredict AI - Advanced Disease Risk Assessment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- SweetAlert2 for beautiful alerts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-heartbeat"></i> MediPredict AI</h1>
+            <p>Advanced Multi-Disease Risk Assessment System</p>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <ul>
+                    <li><a href="#" class="active" id="nav-assessment"><i class="fas fa-clipboard-check"></i> Assessment</a></li>
+                    <li><a href="#" id="nav-history"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="#" id="nav-about"><i class="fas fa-info-circle"></i> About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- About Section -->
+        <section id="about-section" class="main-section" style="display: none;">
+            <div class="card">
+                <h2><i class="fas fa-microscope"></i> About MediPredict AI</h2>
+                <p>MediPredict AI is an advanced disease prediction system that leverages machine learning algorithms to assess your risk for multiple diseases based on your symptoms, demographics, and medical indicators.</p>
+                
+                <h3>How It Works</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-user-md"></i></div>
+                        <h4>Step 1: Input Your Data</h4>
+                        <p>Provide information about your symptoms, demographics, and medical test results.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-brain"></i></div>
+                        <h4>Step 2: AI Analysis</h4>
+                        <p>Our reinforcement learning algorithms analyze your data against patterns from medical research.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Step 3: Risk Assessment</h4>
+                        <p>Receive a detailed analysis of your disease risks with visualizations and trends.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-file-prescription"></i></div>
+                        <h4>Step 4: Recommendations</h4>
+                        <p>Get personalized treatment recommendations and next steps.</p>
+                    </div>
+                </div>
+                
+                <div class="disclaimer">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Important Note</h4>
+                    <p>This tool is for informational purposes only and does not substitute professional medical advice. Always consult with healthcare professionals for diagnosis and treatment.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- History Section -->
+        <section id="history-section" class="main-section" style="display: none;">
+            <div class="card">
+                <h2><i class="fas fa-history"></i> Your Assessment History</h2>
+                <p>View your previous risk assessments and track changes over time.</p>
+                
+                <div id="history-list" class="history-list">
+                    <div class="loading-container">
+                        <div class="loading-spinner"></div>
+                        <p>Loading your history...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Assessment Section -->
+        <section id="assessment-section" class="main-section">
+            <div class="card intro">
+                <h2><i class="fas fa-stethoscope"></i> Personalized Disease Risk Assessment</h2>
+                <p>This AI-powered system analyzes your health data to provide a comprehensive assessment of your risk for multiple diseases, with personalized recommendations.</p>
+            </div>
+
+            <div class="assessment-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="symptoms"><i class="fas fa-heartbeat"></i> Symptoms</button>
+                    <button class="tab-btn" data-tab="demographics"><i class="fas fa-user"></i> Demographics</button>
+                    <button class="tab-btn" data-tab="results"><i class="fas fa-chart-pie"></i> Results</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Symptoms Tab -->
+                    <div class="tab-pane active" id="symptoms-tab">
+                        <h3><i class="fas fa-search-plus"></i> Select Your Symptoms</h3>
+                        <p>Choose all symptoms you've been experiencing recently:</p>
+                        
+                        <div class="search-container">
+                            <input type="text" id="symptom-search" placeholder="Search symptoms...">
+                            <i class="fas fa-search search-icon"></i>
+                        </div>
+                        
+                        <div class="symptom-list" id="symptom-checkboxes">
+                            <!-- Symptoms will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="selected-symptoms" id="selected-symptoms">
+                            <h4>Selected Symptoms:</h4>
+                            <ul id="selected-symptoms-list"></ul>
+                        </div>
+                        
+                        <div class="navigation-buttons">
+                            <button class="next-btn" data-next="demographics">Next: Demographics <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Demographics Tab -->
+                    <div class="tab-pane" id="demographics-tab">
+                        <h3><i class="fas fa-user-circle"></i> Your Demographics</h3>
+                        <p>Please provide your personal information:</p>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" min="0" max="120">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender">
+                                    <option value="">Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="height">Height (cm)</label>
+                                <input type="number" id="height" min="0" max="250">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="weight">Weight (kg)</label>
+                                <input type="number" id="weight" min="0" max="500">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Do you smoke?</label>
+                            <div class="radio-group styled-radio">
+                                <label><input type="radio" name="smoking" value="yes"> <span>Yes</span></label>
+                                <label><input type="radio" name="smoking" value="no" checked> <span>No</span></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Physical Activity Level</label>
+                            <select id="physical-activity">
+                                <option value="low">Low (Less than 30 min/week)</option>
+                                <option value="moderate">Moderate (30-150 min/week)</option>
+                                <option value="high">High (More than 150 min/week)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Family History (Select all that apply)</label>
+                            <div class="checkbox-group styled-checkbox" id="family-history">
+                                <label><input type="checkbox" value="diabetes"> <span>Diabetes</span></label>
+                                <label><input type="checkbox" value="heart-disease"> <span>Heart Disease</span></label>
+                                <label><input type="checkbox" value="cancer"> <span>Cancer</span></label>
+                                <label><input type="checkbox" value="alzheimers"> <span>Alzheimer's</span></label>
+                                <label><input type="checkbox" value="arthritis"> <span>Arthritis</span></label>
+                                <label><input type="checkbox" value="hypertension"> <span>Hypertension</span></label>
+                                <label><input type="checkbox" value="depression"> <span>Depression</span></label>
+                            </div>
+                        </div>
+                        
+                        <div class="navigation-buttons">
+                            <button class="prev-btn" data-prev="symptoms"><i class="fas fa-arrow-left"></i> Previous</button>
+                            <button id="analyze-btn" class="analyze-btn"><i class="fas fa-brain"></i> Analyze My Risk</button>
+                        </div>
+                    </div>
+
+                    <!-- Results Tab -->
+                    <div class="tab-pane" id="results-tab">
+                        <div id="loading" class="loading-container">
+                            <div class="loading-spinner"></div>
+                            <p>Advanced AI analysis in progress...</p>
+                            <div class="loading-steps">
+                                <div class="step active">Processing symptoms</div>
+                                <div class="step">Analyzing risk factors</div>
+                                <div class="step">Evaluating biomarkers</div>
+                                <div class="step">Generating risk assessment</div>
+                                <div class="step">Creating recommendations</div>
+                            </div>
+                        </div>
+                        
+                        <div id="results-content" style="display: none;">
+                            <h3><i class="fas fa-chart-bar"></i> Your Disease Risk Assessment</h3>
+                            
+                            <div class="results-summary">
+                                <p>Based on your provided information, here is your personalized disease risk assessment:</p>
+                            </div>
+                            
+                            <div class="dashboard-view">
+                                <div class="risk-overview">
+                                    <h4>Risk Overview</h4>
+                                    <div class="chart-container">
+                                        <canvas id="risk-overview-chart"></canvas>
+                                    </div>
+                                </div>
+                                
+                                <div class="risk-trends">
+                                    <h4>Risk Trend Analysis</h4>
+                                    <div class="chart-container">
+                                        <canvas id="risk-trend-chart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="risk-results" class="risk-results">
+                                <!-- Results will be populated by JavaScript -->
+                            </div>
+                            
+                            <div id="prescription-section" class="prescription-section">
+                                <h3><i class="fas fa-file-medical"></i> Personalized Health Recommendations</h3>
+                                <p>Based on your risk assessment, here are personalized recommendations:</p>
+                                
+                                <div id="prescription-content">
+                                    <!-- Prescription will be populated by JavaScript -->
+                                </div>
+                                
+                                <button id="print-prescription" class="print-btn"><i class="fas fa-print"></i> Print Recommendations</button>
+                            </div>
+                            
+                            <div class="disclaimer">
+                                <h4><i class="fas fa-exclamation-triangle"></i> Important Disclaimer</h4>
+                                <p>This assessment is for informational purposes only and does not constitute medical advice. 
+                                Please consult with a healthcare professional for proper diagnosis and treatment. 
+                                The predictions are based on the information you provided and general risk factors.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="navigation-buttons results-nav">
+                            <button class="prev-btn" data-prev="medical"><i class="fas fa-arrow-left"></i> Modify Inputs</button>
+                            <button id="restart-btn" class="restart-btn"><i class="fas fa-redo"></i> Start New Assessment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MediPredict AI</h4>
+                    <p>Advanced disease prediction powered by artificial intelligence and machine learning.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#" id="footer-assessment">New Assessment</a></li>
+                        <li><a href="#" id="footer-history">View History</a></li>
+                        <li><a href="#" id="footer-about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Disclaimer</h4>
+                    <p>This tool is for educational purposes only. Always consult healthcare professionals for medical advice.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 MediPredict AI - Advanced Disease Risk Assessment System</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Templates for dynamic content - these use JavaScript templating, not Jinja2 -->
+    <script type="text/template" id="prescription-template">
+        <div class="prescription">
+            <div class="prescription-header">
+                <h4>${disease} Management Plan</h4>
+                <div class="prescription-date">Date: ${date}</div>
+            </div>
+            
+            <div class="prescription-section">
+                <h5><i class="fas fa-pills"></i> Recommended Treatments</h5>
+                <ul class="treatment-list" id="treatment-list">
+                    <!-- Treatments will be populated by JavaScript -->
+                </ul>
+            </div>
+            
+            <div class="prescription-section">
+                <h5><i class="fas fa-heartbeat"></i> Lifestyle Modifications</h5>
+                <ul class="lifestyle-list" id="lifestyle-list">
+                    <!-- Lifestyle modifications will be populated by JavaScript -->
+                </ul>
+            </div>
+            
+            <div class="prescription-section">
+                <h5><i class="fas fa-calendar-check"></i> Follow-up Recommendations</h5>
+                <ul class="followup-list" id="followup-list">
+                    <!-- Follow-up recommendations will be populated by JavaScript -->
+                </ul>
+            </div>
+            
+            <div class="prescription-footer">
+                <p><strong>Note:</strong> These recommendations are generated based on your risk assessment. 
+                Please consult with a healthcare professional before making any changes to your health regimen.</p>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="history-item-template">
+        <div class="history-item" data-id="${id}">
+            <div class="history-date">${date}</div>
+            <div class="history-summary">
+                <div class="top-risks" id="risk-badges-${id}">
+                    <!-- Risk badges will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="history-actions">
+                <button class="view-details-btn"><i class="fas fa-search"></i> View Details</button>
+            </div>
+        </div>
+    </script>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
